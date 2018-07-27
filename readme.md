@@ -38,6 +38,8 @@ $ composer install
 ~~~
 Update the Google API client_id, client_secret config file in "config/google_api.php" directory.
 
+PS: Give read,write permission to Google App.
+
 ### Manual testing:
 
 Run the console command in terminal. 
@@ -77,7 +79,7 @@ To run the **Feature** suites
 $ ./test feature
 ~~~
 
-To run the **Integration** suites, which use the real APIs of Hacker News,
+To run the **Integration** suites, which use the real APIs of Google Drive API,
  this test may take a little bit time to execute.
 ~~~
 $ ./test int
