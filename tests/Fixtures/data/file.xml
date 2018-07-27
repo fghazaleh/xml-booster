@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data>
+    <item>
+        <name>Franco</name>
+        <gender>Male</gender>
+        <city>Rome</city>
+    </item>
+    <item>
+        <name>John</name>
+        <gender>Male</gender>
+        <city>London</city>
+    </item>
+    <item>
+        <name>Sofia</name>
+        <gender>Female</gender>
+        <city>Berlin</city>
+    </item>
+</data>

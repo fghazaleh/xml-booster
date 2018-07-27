@@ -1,0 +1,38 @@
+{
+    "name": "fghazaleh/xml-booster",
+    "description": "XML Parser, Google spreadsheet",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ghazaleh",
+            "email": "franco.ghazaleh@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php":"~7.0",
+        "ext-dom":"*",
+        "ext-xml":"*",
+        "symfony/console": "^4.1",
+        "hobnob/xml-stream-reader": "^1.0",
+        "symfony/finder": "^4.1",
+        "symfony/monolog-bundle": "^3.3",
+        "google/apiclient": "^2.2"
+    },
+    "require-dev": {
+        "mockery/mockery": "~1.0",
+        "phpunit/phpunit": "~6.0",
+        "symfony/var-dumper": "^4.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "FGhazaleh\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    }
+}

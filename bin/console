@@ -1,0 +1,35 @@
+#!/usr/bin/env php
+<?php
+require  dirname(__FILE__).'/../vendor/autoload.php';
+
+use FGhazaleh\Commands\XmlParserCommand;
+use FGhazaleh\Configuration\ConfigurationLoader;
+use FGhazaleh\Application\Application;
+use FGhazaleh\Storage\GoogleSheets\GoogleClientFactory;
+use FGhazaleh\Storage\GoogleSheets\GoogleSheetsStorage;
+
+//application path.
+$applicationPath = __DIR__.'/../';
+
+try {
+    // load the dependencies
+    require_once $applicationPath.'src/Dependency/ConfigurationDependency.php';
+    require_once $applicationPath.'src/Dependency/LoggerDependency.php';
+    require_once $applicationPath.'src/Dependency/ReaderDependency.php';
+    require_once $applicationPath.'src/Dependency/StorageDependency.php';
+
+    //create a new Application.
+    $application = new Application($logger,$config);
+
+    //add commend to Application console.
+    $application->add(
+        new XmlParserCommand($reader,$storage)
+    );
+
+    //run the application.
+    $application->run();
+}catch (\Exception $e) {
+    $logger->error($e->getMessage(), $e->getTrace());
+}
+
+
