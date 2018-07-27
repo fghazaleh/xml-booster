@@ -38,6 +38,16 @@ $ composer install
 ~~~
 Update the Google API client_id, client_secret config file in "config/google_api.php" directory.
 
+~~~
+'sheets' => [
+        'client_id' => '',
+        'client_secret' => '',
+        'redirect_url' => 'urn:ietf:wg:oauth:2.0:oob',
+        'scopes' => [Google_Service_Sheets::DRIVE],
+        'token_file' => 'storage/token.json'
+    ]
+~~~
+
 PS: Give **read,write** permission to Google App.
 
 ### Manual testing:
