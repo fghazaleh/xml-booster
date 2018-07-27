@@ -32,10 +32,11 @@ Run the following commands in terminal.
 ~~~
 $ git clone https://github.com/fghazaleh/xml-booster.git
 ~~~
-then..
+then ..
 ~~~
 $ composer install
 ~~~
+Update the Google API client_id, client_secret config file in "config/google_api.php" directory.
 
 ### Manual testing:
 
@@ -53,7 +54,12 @@ $ ./app up
 
 then ..
 ~~~
-$ ./app -e or $ ./app enter
+$ ./app -e
+~~~
+
+or 
+~~~
+$  $ ./app enter
 ~~~
 
 after that use the above manual testing steps. 
