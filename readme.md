@@ -38,13 +38,19 @@ $ composer install
 ~~~
 Update the Google API client_id, client_secret config file in "config/google_api.php" directory.
 
-PS: Give read,write permission to Google App.
+PS: Give **read,write** permission to Google App.
 
 ### Manual testing:
 
 Run the console command in terminal. 
 ~~~
 $ ./bin/console
+~~~
+
+or 
+
+~~~
+$ ./bin/console parse "YOUR_XML_FILE_PATH"
 ~~~
 
 ### Docker testing
@@ -68,6 +74,8 @@ after that use the above manual testing steps.
 
 
 ### PHP testing:
+
+PS: Make sure to run the php composer to install dev dependency before testing.
 
 To run the **Unit** suites
 ~~~
